@@ -1,0 +1,33 @@
+@import "./sass/utils/variables.scss";
+
+$primary: #010048;
+$navbar-padding-x: 1rem;
+$accordion-button-active-color: $primaryCol;
+$accordion-icon-active-color: $primaryCol;
+$accordion-button-focus-border-color: transparent;
+$accordion-button-active-bg: transparent;
+$border-color: $primaryCol;
+
+.navbar .navbar-brand {
+  color: aliceblue;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: aliceblue;
+  text-decoration: none;
+}
+.navbar .navbar-nav .nav-link.active {
+  background-color: #0301669d;
+  color: aliceblue;
+}
+.navbar .navbar-nav .nav-link:hover {
+  background-color: aliceblue;
+  color: #0301669d;
+}
+
+.nav-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

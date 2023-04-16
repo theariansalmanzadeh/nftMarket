@@ -1,0 +1,74 @@
+@import "../utils/variables.scss";
+
+.AboutUs {
+  padding: 2rem 0.5rem 0 0.5rem;
+  color: $white;
+  height: 100vh;
+  position: relative;
+}
+
+.heading {
+  font-size: 2.4em;
+  margin-left: 5rem;
+  color: $primaryCol;
+  opacity: 0;
+  transform: translateX(-1rem);
+  animation: fadeIn 1s forwards 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.landing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.logo {
+  top: 0%;
+  position: absolute;
+}
+
+.LandingText {
+  top: 20%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.secondSection {
+  border-top: 1px solid #ccc;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  position: absolute;
+  margin-left: 5rem;
+  top: 0;
+}
+
+.projectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  & h5 {
+    color: $primaryCol;
+    align-self: flex-start;
+    opacity: 0;
+    transform: translateX(-1rem);
+    font-size: 2rem !important;
+  }
+}

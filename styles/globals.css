@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap");
+
 html,
 body {
   padding: 0;
@@ -17,10 +19,10 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    /* color-scheme: dark; */
   }
   body {
     color: white;
-    background: black;
+    /* background-color: #2a2c37 !important; */
   }
 }

@@ -1,0 +1,128 @@
+@import "../components/button.scss";
+@import "../utils/variables.scss";
+
+.createNFT {
+  position: relative;
+  width: 100%;
+  & > * {
+    color: $white;
+  }
+}
+
+.property {
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1rem !important;
+  }
+
+  & label {
+    color: $secondBlack;
+  }
+}
+
+.errorModal {
+  background-color: red;
+  width: 30vw;
+  height: 20vh;
+  top: 20%;
+  right: 10rem;
+  position: absolute;
+  border-radius: 1rem;
+  z-index: 100;
+  box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $secondBlack;
+  color: $white;
+  gap: 1rem;
+  & button {
+    padding: 0.5rem 1.8rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: $primaryCol;
+    color: $secondBlack;
+  }
+}
+
+.form input {
+  &:focus {
+    border: 1px solid $primaryCol;
+  }
+}
+.form {
+  .nameInput {
+    width: 50%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .descriptionInput {
+    width: 50%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .description {
+    position: relative;
+
+    & label {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: all 0.1s linear;
+    }
+    & textarea:focus ~ label {
+      font-size: 0.8rem;
+      color: $secondBlack;
+      transform: translateY(-1.1rem);
+    }
+    & textarea {
+      resize: none;
+      max-height: 5rem;
+      min-height: 5rem;
+    }
+  }
+  .name {
+    position: relative;
+
+    & label {
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      transition: all 0.1s linear;
+    }
+    & input:focus ~ label {
+      font-size: 0.8rem;
+      color: $secondBlack;
+      transform: translateY(-1.1rem);
+    }
+  }
+  label.active {
+    font-size: 0.8rem;
+    color: $secondBlack;
+    transform: translateY(-1.1rem);
+  }
+}
+
+.title {
+  color: $primaryCol;
+}
+
+.heading {
+  color: $secondBlack;
+}
+
+.submitBtn {
+  @include button;
+}
+
+.linkForm {
+  width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+}

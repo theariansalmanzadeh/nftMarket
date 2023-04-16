@@ -1,0 +1,31 @@
+@import "./sass/utils/variables.scss";
+
+.collection {
+  h3 {
+    color: #8a32ff;
+  }
+}
+
+.imgWrapper {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: $secondBlack;
+  &:hover {
+    color: #8a32ff;
+    text-decoration: underline;
+  }
+}
+
+.nftBackground {
+  gap: 1rem;
+}
+
+.listItem {
+  height: 100%;
+}

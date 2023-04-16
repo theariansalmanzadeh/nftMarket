@@ -1,0 +1,94 @@
+@import "../utils/variables.scss";
+
+.preview {
+  width: 60vw;
+  height: 50vh;
+  position: absolute;
+  background-color: $white;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  color: $primaryCol;
+}
+
+.heading button {
+  color: $secondBlack;
+  background-color: transparent;
+  border: 1px solid $secondBlack;
+  border-radius: 50%;
+  padding: 0 1rem;
+}
+
+.nftWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0rem 1rem;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 40%;
+  font-weight: bold;
+}
+
+.details span {
+  color: $primaryCol;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+}
+
+.ownerSection {
+  margin-bottom: 2rem;
+  @media screen and (max-width: 768px) {
+    & p:last-child {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.ownerSection p:first-child {
+  color: $primaryCol;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.nftWrapper img {
+  width: 20vw;
+}
+.nftWrapper .nftImg {
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  border-radius: 1rem;
+  align-self: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 98vh;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  backdrop-filter: blur(2px);
+}

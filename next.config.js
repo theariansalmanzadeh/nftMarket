@@ -1,6 +1,21 @@
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  reactStrictMode: false,
+  images: {
+    domains: ["gateway.pinata.cloud"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**gateway.pinata.cloud",
+      },
+    ],
+  },
+};
 
-module.exports = nextConfig
+// const withVideos = require("next-videos");
+
+// module.exports = withVideos();
+
+// module.exports = {};
+
+module.exports = nextConfig;

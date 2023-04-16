@@ -1,0 +1,62 @@
+@import "../utils/variables.scss";
+
+.TxStatus {
+  background-color: $white;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  height: 8vh;
+  width: 20%;
+  border-radius: 1rem;
+  border: 1px solid $primaryCol;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  padding: 0 0.5rem;
+  z-index: 1000;
+  & p {
+    margin: 0 0;
+  }
+  &.success {
+    border: 1px solid $correctCol !important;
+  }
+  &.failed {
+    border: 1px solid $warningCol !important;
+  }
+}
+
+.TxStatus.Active {
+  animation: popUp 10s linear 1 forwards;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+.notification {
+  height: 100%;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+
+  & .iconComplete {
+    fill: $correctCol;
+  }
+  & .iconFailed {
+    color: $warningCol;
+  }
+}

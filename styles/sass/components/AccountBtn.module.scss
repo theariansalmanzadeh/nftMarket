@@ -1,0 +1,14 @@
+@import "../utils/variables.scss";
+.noMetamaskLink {
+  border: 1px solid $white;
+  color: $textWhite;
+  border-radius: 0.8rem;
+  background-color: $incorrectCol;
+  text-decoration: none;
+  font-weight: bold;
+
+  padding: 0.5rem 0.8rem;
+  &:hover {
+    background-color: $incorrectColDark;
+  }
+}

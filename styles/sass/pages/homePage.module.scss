@@ -1,0 +1,92 @@
+@import "../utils/variables.scss";
+
+.card {
+  background-color: ($white);
+  list-style: none;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.nftBackground {
+  gap: 1rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.details {
+  color: var($textBlack);
+  font-weight: 600;
+  .price {
+    color: ($textPrimary);
+
+    & > p {
+      font-weight: bold;
+    }
+
+    font-size: 1.2rem;
+  }
+}
+.buttons {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  & button {
+    padding: 0.5rem 1rem;
+    border: 1px solid $primaryCol;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  & button:nth-of-type(2):hover {
+    background-color: $primaryCol;
+    color: $white;
+  }
+  & .buyIcon {
+    background-color: $primaryCol;
+    color: $white;
+    font-weight: 500;
+  }
+}
+.heading {
+  color: $primaryCol;
+  // background-color: $backgroundPrimary;
+  margin-bottom: 0;
+}
+
+.warpper {
+  // background-color: $backgroundPrimary !important;
+  margin: 0 auto;
+}
+
+.vidContainer {
+  // background-color: red;
+  width: 50%;
+  margin: 0 auto;
+  & video {
+    width: 100%;
+    z-index: 3;
+  }
+}
+
+.container {
+  background-color: #3f414b;
+}
+
+.homepage {
+  gap: 1rem;
+  position: relative;
+  display: flex;
+  padding: 1rem 5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // height: 90vh;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+}

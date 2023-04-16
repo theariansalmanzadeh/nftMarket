@@ -1,0 +1,60 @@
+@import "../utils//variables.scss";
+
+.faq {
+  // background-color: $backgroundPrimary;
+  height: 100vh;
+  & h2 {
+    color: $primaryCol;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    @media screen and (max-width: 768px) {
+      padding-left: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.AccordionItem {
+  border: none;
+  padding: 0;
+}
+
+.AccordionHeader {
+  padding: 0 !important;
+  background-color: $backgroundPrimary;
+  & button {
+    background-color: $backgroundPrimary;
+    font-size: 1.4rem;
+    color: $white;
+    border-bottom: 1px solid $primaryCol;
+    &::after {
+      fill: $white !important;
+      color: $white !important;
+      background-color: $white !important;
+      border-radius: 0.2rem;
+    }
+  }
+}
+
+.AccordionBody {
+  background-color: $backgroundPrimary;
+  color: $white;
+  border: none !important;
+  padding: 0.8rem 0;
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.Accordion {
+  width: 60%;
+  margin: 5rem auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+}

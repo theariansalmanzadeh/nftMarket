@@ -1,0 +1,134 @@
+@import "./sass/utils/variables.scss";
+
+.navbar {
+  background-color: $navbarBackground;
+  & h1 {
+    font-family: "Caveat", sans-serif;
+  }
+  & .navbarRes {
+    @media screen and (max-width: 768px) {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background-color: white;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      bottom: 0;
+      padding-top: 5rem;
+      &.active {
+        display: block;
+      }
+      & li {
+        padding: 1rem 0rem;
+        border: none;
+        & a {
+          // display: inline-block;
+          // width: 90%;
+          padding: 2rem 0rem;
+          color: $primaryCol !important;
+        }
+      }
+      & .hamIcon {
+        display: block;
+      }
+    }
+    & .closeBtn {
+      background-color: transparent;
+      margin-right: 1rem;
+      border: none;
+      font-size: 2rem;
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+    & .btnWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+  & .hamIcon {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.nav-img {
+  object-fit: cover;
+}
+
+.dropdown {
+  width: 4rem;
+}
+
+.dropdown-toggle {
+  display: inline-block;
+}
+
+.dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+}
+
+.bell:hover {
+  background-color: transparent !important;
+  transform-origin: top;
+  animation: bellAnime 0.5s ease-in-out;
+  & .bi-bell {
+    color: red;
+  }
+}
+@keyframes bellAnime {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.Prices {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  background-color: $white;
+  // background-color: $backgroundPrimary;
+  border-bottom: 1px solid $primaryCol;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.Prices > div {
+  background-color: #f04a55;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.2rem;
+}
+
+.Noprice {
+  background-color: #eee !important;
+}
+
+div.redChart {
+  background-color: $increaseCol;
+}
+div.greenChart {
+  background-color: $decreaseCol;
+}

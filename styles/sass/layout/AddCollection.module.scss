@@ -1,0 +1,62 @@
+@import "../components/button.scss";
+@import "../utils//variables.scss";
+
+.CollectionForm {
+  gap: 1rem;
+
+  & input {
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.2rem;
+  }
+
+  & button {
+    align-self: flex-start;
+    border-radius: 1rem;
+    @include button;
+  }
+}
+
+.AddCollection h3 {
+  color: $textPrimary;
+  padding: 1rem 0;
+}
+
+.AddCollection p span {
+  color: $warningCol;
+  font-size: 1.2rem;
+}
+
+.AddCollection {
+  background-color: $backgroundPrimary;
+  color: $white;
+}
+
+.NFTs {
+  width: 5rem;
+  height: 5rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5rem;
+}
+
+.ImgWrapper {
+  align-self: center;
+  & img:nth-child(1) {
+    transform: rotate(-45deg) translateY(1rem);
+  }
+  & img:nth-child(3) {
+    transform: rotate(45deg) translateY(1rem);
+  }
+  & img:nth-child(2) {
+    z-index: 3;
+    position: relative;
+  }
+}
+
+.description {
+  width: 100%;
+  resize: none;
+}

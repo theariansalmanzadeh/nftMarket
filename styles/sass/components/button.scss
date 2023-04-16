@@ -1,0 +1,12 @@
+@import "../utils/variables.scss";
+
+@mixin button {
+  padding: 0.5rem 1rem;
+  border: 1px solid $primaryCol;
+  background-color: $white;
+  color: $primaryCol;
+  &:hover {
+    background-color: $primaryCol;
+    color: $textWhite;
+  }
+}
