@@ -10,6 +10,7 @@ const nextConfig = {
       },
     ],
   },
+  distDir: "build",
 };
 
 // const withVideos = require("next-videos");

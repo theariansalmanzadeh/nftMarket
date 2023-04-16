@@ -40,7 +40,7 @@ function FAQ() {
             Smart contracts are simply programs stored on a blockchain that run
             when predetermined conditions are met. They typically are used to
             automate the execution of an agreement so that all participants can
-            be immediately certain of the outcome, without any intermediary's
+            be immediately certain of the outcome, without any intermediarys
             involvement or time loss.
           </Accordion.Body>
         </Accordion.Item>
