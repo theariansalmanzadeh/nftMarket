@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ethers } from "ethers";
 import { useDispatch, useSelector } from "react-redux";
-import { web3Actions } from "../store/index";
 import LoadingMarket from "./LoadingMarket.js";
 import { useGetAllNFTS } from "../hooks/getAllNFTs";
 import TxConfermation from "./TxConfermation";
@@ -16,7 +14,7 @@ function NftList() {
   const { nfts, getNFTs, buyNft } = useGetAllNFTS();
 
   const [isPreview, setIsPreview] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [nftsOnSale, setNftsOnSale] = useState([]);
 
   const notification = useSelector((state) => state.web3.notfiyTx);
@@ -28,9 +26,13 @@ function NftList() {
   useEffect(() => {
     if (!state.contract && !state.provider) return;
 
-    // console.log(state.signer);
-    getNFTs();
-  }, [state.contract]);
+    (async () => {
+      setIsLoading(true);
+      console.log("222");
+      await getNFTs();
+      setIsLoading(false);
+    })();
+  }, [state.contract, state.provider]);
 
   useEffect(() => {
     if (nfts.length !== 0) {
@@ -45,15 +47,21 @@ function NftList() {
     setIsLoading(false);
   };
 
+  console.log("ok");
   if (nftsOnSale === null || nftsOnSale === undefined) return;
 
-  console.log(nftsOnSale);
+  console.log(state.contract);
 
   return (
     <div className={styles.container}>
       <TxConfermation />
       <ul className={`${styles.homepage}`}>
         {isLoading && <LoadingMarket />}
+        {nftsOnSale.length === 0 && (
+          <p className={styles.notConnectedWarning}>
+            Please install and Connect your Wallet for interaction
+          </p>
+        )}
         {nftsOnSale.map((nft, indx) => (
           <li key={indx} className={` overflow-hidden rounded ${styles.card}`}>
             <div
